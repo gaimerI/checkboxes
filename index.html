@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Information
+    </title>
+  </head>
+  <body>
+<p id="online"></p>
+
+<script>
+document.getElementById("online").innerHTML =
+"navigator.onLine = " + navigator.onLine;
+</script>
+
+<p id="fullurl"></p>
+
+<script>
+document.getElementById("fullurl").innerHTML = 
+"The full URL of this page is:<br>" + window.location.href;
+</script>
+  </body>
+</html>
