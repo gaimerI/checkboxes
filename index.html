@@ -10,14 +10,37 @@
 
 <script>
 document.getElementById("online").innerHTML =
-"navigator.onLine = " + navigator.onLine;
+"You are online:  = " + navigator.onLine;
 </script>
 
 <p id="fullurl"></p>
 
 <script>
 document.getElementById("fullurl").innerHTML = 
-"The full URL of this page is:<br>" + window.location.href;
+"The full URL of this page is: " + window.location.href;
+</script>
+
+<p>Click the button to get your coordinates. This information will not be saved here.</p>
+
+<button onclick="getLocation()">Get location</button>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
 </script>
   </body>
 </html>
