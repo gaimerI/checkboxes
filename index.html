@@ -1,57 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>
-      Information
-    </title>
+    
   </head>
   <body>
-<p id="online"></p>
-
-<script>
-document.getElementById("online").innerHTML =
-"You are online:  = " + navigator.onLine;
-</script>
-
-<p id="fullurl"></p>
-
-<script>
-document.getElementById("fullurl").innerHTML = 
-"The full URL of this page is: " + window.location.href;
-</script>
-
-<p>Click the button to get your coordinates. This information will not be saved here.</p>
-
-<button onclick="getLocation()">Get location</button>
-
-<p id="demo"></p>
-
-<script>
-const x = document.getElementById("demo");
-
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
-
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
-}
-</script>
-
-<p id="date"></p>
-
-<script>
-const d = new Date(); 
-document.getElementById("date").innerHTML = "Current date is: " + d;
-</script>
-
-</body>
-</html>
-
+    <input type="checkbox" id="myCheck1"> <input type="checkbox" id="myCheck2"> <input type="checkbox" id="myCheck3">
   </body>
-</html>
