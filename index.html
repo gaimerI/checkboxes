@@ -1,140 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<script>
-function disable() {
-  document.getElementById("mySelect").disabled=true;
-}
-function enable() {
-  document.getElementById("mySelect").disabled=false;
-}
-</script>
-  <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Messaging App</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>
-  Dropdown Menu
-</h1>
-<form>
-<select id="mySelect">
-  <option>Apple</option>
-  <option>Pear</option>
-  <option>Banana</option>
-  <option>Orange</option>
-</select>
-<br><br>
-<input type="button" onclick="disable()" value="Disable list">
-<input type="button" onclick="enable()" value="Enable list">
-</form>
-
-  <h1>
-  Checkbox Input
-</h1>
-  <input type="checkbox">
-
-  <h1>
-  Colour Input
-</h1>
-  <input type="color">
-
-  <h1>
-  Date Input
-</h1>
-  <input type="date">
-
-<h1>
-  Date Input
-</h1>
-  <input type="datetime-local">
-
-  <h1>
-  Email Input
-</h1>
-  <input type="email">
-<h1>
-  File Input
-</h1>
-  <input type="file">
-
-<h1>
-  Hidden Input
-</h1>
-  <input type="hidden">
+  <div class="app-container">
+    <header>
+      <h1>Messaging App</h1>
+    </header>
+    <nav>
+      <button id="inboxBtn">Inbox</button>
+      <button id="sentBtn">Sent</button>
+      <button id="composeBtn">Compose</button>
+    </nav>
+    <main>
+      <div id="messageList" class="message-list"></div>
+      <div id="composeForm" class="compose-form hidden">
+        <textarea id="messageContent" placeholder="Write your message..."></textarea>
+        <button id="sendBtn">Send</button>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
 </body>
-
-  <h1>
-  Image Input
-</h1>
-  <input type="image">
-
-<h1>
-  Month Input
-</h1>
-  <input type="month">
-
-<h1>
-  Number Input
-</h1>
-  <input type="number">
-
-<h1>
-  Password Input
-</h1>
-  <h3>
-    Please do not share your real passwords anywhere
-  </h3>
-  <input type="password">
-
-<h1>
-  Radio Input
-</h1>
-  <input type="radio">
-
-<h1>
-  Range Input
-</h1>
-  <input type="range">
-
-  <h1>
-  Reset Input
-</h1>
-  <input type="reset">
-
-<h1>
-  Search Input
-</h1>
-  <input type="search">
-
-<h1>
-  Submit Input
-</h1>
-  <input type="submit">
-
-<h1>
-  Telephone Input
-</h1>
-  <input type="tel">
-
-  <h1>
-  Text Input
-</h1>
-  <input type="text">
-
-  <h1>
-  Time Input
-</h1>
-  <input type="time">
-
-  <h1>
-  URL Input
-</h1>
-  <input type="url">
-
-  <h1>
-  Week Input
-</h1>
-  <input type="week">
-
-  The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.
-
 </html>
